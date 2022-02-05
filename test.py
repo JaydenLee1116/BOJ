@@ -1,10 +1,2 @@
-import sys
-
-A = int(sys.stdin.readline())
-B = int(sys.stdin.readline())
-C = int(sys.stdin.readline())
-
-answer = str(A * B * C)
-
-for i in range(10):
-    print(answer.count(str(i)))
+def solve(a):
+    return sum(a)
