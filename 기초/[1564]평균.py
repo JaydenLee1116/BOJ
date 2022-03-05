@@ -6,8 +6,8 @@ arr = list(map(int, sys.stdin.readline().split()))
 
 num_max = max(arr)
 
-arr_new = []
 a = 0
+
 for i in arr:
     a += (i / num_max * 100)
 
