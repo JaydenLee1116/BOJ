@@ -10,7 +10,7 @@ B = list(map(int, sys.stdin.readline().rstrip().split()))
 
 C = []
 
-for i in B:
+for i in B: 
     if i in A:
         C.append(1)
     else:
