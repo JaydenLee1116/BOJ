@@ -1,17 +1,21 @@
 import sys
-<<<<<<< HEAD
 
 N = int(sys.stdin.readline())
 
-arr = list(map(int, sys.stdin.readline().split()))
-
-num_max = max(arr)
-
-arr_new = []
-a = 0
-for i in arr:
-    a += (i / num_max * 100)
-
-print(a / N)
-=======
->>>>>>> a956b74de92c3c94304e5cfbc372822a88d56df0
+for _ in range(N):
+    noun = sys.stdin.readline().rstrip()
+    arr = []
+    temp = 0
+    
+    for alp in noun:
+        arr.append(alp)
+    
+    if len(arr) == 1:
+        continue
+    else:
+        for i in range(len(arr) - 1):
+            if arr[i] != arr[i+1]:
+                temp += 1
+        if temp >= len(set(arr)):
+            N -= 1
+print(N)
