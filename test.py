@@ -1,6 +1,15 @@
-<<<<<<< HEAD
 import sys
 
-=======
-import sys
->>>>>>> 86f21aaee2cacf652d5749dced49d9b6f04ceddf
+M, N = map(int, sys.stdin.readline().rstrip().split())
+
+def sol(M, N):
+    arr = [True] * (N+1)
+    for i in range(M, N+1):
+        for j in range(2, int(i**0.5) +1):
+            if i % j == 0:
+                arr[i] = False
+                break
+        if i > 1 and arr[i]:
+            print(i)
+
+sol(M, N)
